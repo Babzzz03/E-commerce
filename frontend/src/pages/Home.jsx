@@ -226,28 +226,28 @@ const rotate = keyframes`
   0% {
     transform: rotate(0deg);
   }
-  10% {
+  14% {
     transform: rotate(0deg);
   }
   20% {
     transform: rotate(90deg);
   }
-  30% {
+  34% {
     transform: rotate(90deg);
   }
   40% {
     transform: rotate(180deg);
   }
-  50% {
+  54% {
     transform: rotate(180deg);
   }
   60% {
     transform: rotate(270deg);
   }
-  70% {
+  74% {
     transform: rotate(270deg);
   }
-  90% {
+  84% {
     transform: rotate(360deg);
   }
   100% {
@@ -265,7 +265,7 @@ const Rotation = styled.div`
   img {
     width: 290px;
     position: absolute;
-   
+  
   }
 `;
 

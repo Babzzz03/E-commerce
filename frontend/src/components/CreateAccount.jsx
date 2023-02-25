@@ -2,27 +2,30 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import image from "../assets/gradiant.jpg";
+import KeyModel from './KeyModel';
 const CreateAccount = () => {
      const [email, setEmail] = useState("");
       const [userName, setUserName] = useState("");
      const [password, setPassword] = useState("");
   return (
-    <Component
-      style={{
-        background: `url(${image}) no-repeat fixed center`,
-        backgroundSize: "cover",
-      }}
-    >
-      <Form>
+  
+     <Component
+      
+     >
+     <Left>  
+       <KeyModel/>
+       </Left>
+       <Right>
+       <Form>
         <h1>Sign In</h1>
-          <p className="tag">UserName</p>
+          
         <input
           type="text"
           placeholder="Email"
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
         />
-        <p className="tag">E-mail</p>
+       
         <input
           type="text"
           placeholder="Email"
@@ -30,7 +33,7 @@ const CreateAccount = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
       
-        <p className="tag">Password</p>
+        
         <input
           type="text"
           placeholder="Password"
@@ -47,7 +50,13 @@ const CreateAccount = () => {
           </Link>{" "}
         </p>
       </Form>
-    </Component>
+       <Blur></Blur>
+         <Blur2></Blur2>
+         <Blur3></Blur3>
+         <Blur4></Blur4>
+       </Right>
+       
+     </Component>
   );
 }
 
@@ -55,26 +64,52 @@ export default CreateAccount
 
 
 const Component = styled.div`
-  background: url("../assets/gradiant.jpg");
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+background-color: rgba(255, 255, 255, 0.2);
+
+  backdrop-filter: blur(10px);
+height: 100vh;
+width: 100vw;
+display: flex;
+align-items: center;
+justify-content: center;
+`;
+const Left = styled.div`
+height: 100vh;
+width: 30vw;
+background-color: #926b6b;
+
+`;
+const Right = styled.div`
+height: 100vh;
+width: 70vw;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+z-index: 999;
 `;
 
 const Form = styled.div`
   width: 30vw;
-  padding:  0 20px;
+  padding: 20px;
   border-radius: 10px;
   border: 1px solid white;
   background-color: rgba(255, 255, 255, 0.2);
-
+  margin-top: 40px;
   backdrop-filter: blur(20px);
   display: flex;
   flex-direction: column;
-  height: auto;
+  height: 80vh;
   border-radius: 10px;
+
+
+  border-image: linear-gradient(#e8e6e1, #d7ba50) 10;
+border-width: 1px;
+border-style: solid;
+border-radius: 10px !important;
+
+
   h1 {
     padding: 10px;
     padding-bottom: 17px;
@@ -87,11 +122,12 @@ const Form = styled.div`
     border-right: 0;
     border-bottom: 1px solid black;
     background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 7px;
+    border-radius: 0px;
     padding: 10px;
     outline: none;
     margin: 10px auto;
-    font-size: 14px;
+    font-size: 15px;
+    background-color: transparent;
   }
   .tag {
     margin-top: 20px;
@@ -115,7 +151,7 @@ const Form = styled.div`
     color: #2d1941;
     cursor: pointer;
     &:hover {
-        text-decoration: underline;
+      text-decoration: underline;
     }
   }
 `;
@@ -125,4 +161,55 @@ const Button = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+const Blur = styled.div`
+  position: absolute;
+  width: 20rem;
+  height: 14rem;
+  border-radius: 50%;
+  //background: #fdddfc;
+  background: #f9b2f7;
+  filter: blur(54px);
+  top: 20px;
+  right: 10%;
+  z-index: -1;
+`;
+const Blur2 = styled.div`
+  position: absolute;
+  width: 20rem;
+  height: 14rem;
+  border-radius: 50%;
+  //background: #f0ddfd;
+  background: #ce95f4;
+
+  filter: blur(54px);
+  top: 150px;
+  right: 17%;
+  z-index: -3;
+`;
+
+const Blur3 = styled.div`
+  position: absolute;
+  width: 24rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: #efe9ac;
+
+  filter: blur(44px);
+  top: 140px;
+  right: 4%;
+  z-index: -2;
+`;
+const Blur4 = styled.div`
+  position: absolute;
+  width: 59rem;
+  height: 10rem;
+  border-radius: 50%;
+  background: #fdd8de;
+
+  filter: blur(94px);
+bottom: 0;
+  right: 0%;
+  z-index: -1;
 `;

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components'
 import image from "../assets/gradiant.jpg";
+import KeyModel from './KeyModel';
 
 
 const Login = () => {
@@ -11,8 +12,8 @@ const Login = () => {
     <Component
       
     >
-      <Left>
-
+    <Left>  
+      <KeyModel/>
       </Left>
       <Right>
        <Form>
@@ -67,7 +68,7 @@ justify-content: center;
 const Left = styled.div`
 height: 100vh;
 width: 30vw;
-background-color: #eae3e3;
+background-color: #926b6b;
 
 `;
 const Right = styled.div`
@@ -92,6 +93,14 @@ const Form = styled.div`
   flex-direction: column;
   height: 80vh;
   border-radius: 10px;
+
+
+  border-image: linear-gradient(#e8e6e1, #d7ba50) 10;
+border-width: 1px;
+border-style: solid;
+border-radius: 10px !important;
+
+
   h1 {
     padding: 10px;
     padding-bottom: 17px;
